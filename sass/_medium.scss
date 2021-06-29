@@ -1,0 +1,22 @@
+/*General styles*/
+
+.desktop-only-image{
+    display: inline-block;
+}
+
+.mobile-only-image{
+    display: none;
+}
+
+/*Grid styles*/
+
+@for $i from 1 to 13{
+    $w:($i/12) * 100%;
+    .medium-#{$i} {flex-basis: $w;}
+}
+
+/*Header styles*/
+
+/*Main styles*/
+
+

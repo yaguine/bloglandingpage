@@ -1,0 +1,132 @@
+/*General styles*/
+
+html {
+    font-family: "Overpass", sans-serif; // 300 - 600
+    font-family: "Ubuntu", sans-serif; //400 - 500 - 700
+    font-size: 16px;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+.desktop-only-image {
+    display: none;
+}
+
+.mobile-only-image {
+    display: inline-block;
+}
+
+/*Grid styles*/
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.limited {
+    max-width: 1240px;
+    margin: auto;
+    padding: 0 15px;
+}
+
+@for $i from 1 to 13 {
+    $w: ($i/12) * 100%;
+    .small-#{$i} {
+        flex-basis: $w;
+    }
+}
+
+/*Header styles*/
+
+header {
+    padding:40px 25px 80px 25px;
+
+    background-image: linear-gradient(to right, $gradient-very-light-red, $gradient-light-red);
+    color: white;
+
+    border-bottom-left-radius: 100px;
+
+    #header-logo {
+        width: 60px;
+    }
+
+    nav {
+        > ul {
+            display: flex;
+            > li {
+                // Estilos para la lista con 3 submenus
+                list-style: none;
+                > ul {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    #hamburger-button-div {
+        display: flex;
+        justify-content: flex-end;
+        #hamburger-button {
+            background-color: transparent;
+            border: none;
+        }
+    }
+
+    #hamburger-menu {
+        display: none;
+    }
+
+    #main-text {
+        font-family: "Overpass", sans-serif;
+        padding-top: 60px;
+        * {
+            text-align: center;
+        }
+
+        h1{
+            margin-top: 25px;
+            margin-bottom: 10px;
+            font-size:40px;
+        }
+        h4{
+            margin-top: 0px;
+        }
+    }
+
+    #main-buttons{
+        justify-content: center;
+    }
+}
+
+/*Main styles*/
+
+main {
+    article {
+        /*Hay que recortar imagenes usando CSS Slicers*/
+        .article-light-row {
+            color: $primary-very-dark-blue;
+        }
+
+        .article-dark-row {
+            background-image: linear-gradient(
+                to right,
+                $gradient-very-dark-gray-blue,
+                $gradient-very-dark-desaturated-blue
+            );
+            color: white;
+
+            border-top-right-radius: 100px;
+            border-bottom-left-radius: 100px;
+        }
+    }
+}
+
+/*Footer styles*/
+
+footer {
+    background-color: $very-dark-black-blue;
+    color: white;
+}
