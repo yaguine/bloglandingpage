@@ -26,6 +26,11 @@ img {
     flex-wrap: wrap;
 }
 
+.column{
+    display: flex;
+    flex-direction: column;
+}
+
 .limited {
     max-width: 1240px;
     margin: auto;
@@ -56,11 +61,29 @@ header {
     nav {
         > ul {
             display: flex;
+
+            padding: 0;
             > li {
                 // Estilos para la lista con 3 submenus
                 list-style: none;
-                > ul {
-                    display: none;
+                ul{
+                    list-style: none;
+
+                    padding: 15px 0;
+
+                    background-color: rgb(240, 240, 240);
+                    opacity: 0.8;
+
+                    border-radius: 10px;
+
+                    li{
+                        padding: 10px 0;
+                    }
+                }
+            }
+            > li.hidden{
+                ul{
+                    display:none;
                 }
             }
         }
@@ -75,8 +98,43 @@ header {
         }
     }
 
-    #hamburger-menu {
-        display: none;
+    #hamburger-menu{
+        width: 100%;
+        padding: 0 10%;
+
+        background-color:white;
+
+        border-radius: 10px;
+
+        text-align:center;
+        color:$primary-very-dark-blue;
+
+        .hamburger-submenu{
+            h4{
+                padding-left: 3%;
+                img{
+                    margin:0 0 0.3% 1%;
+                    width:2.5%;
+                    transform: scaleY(-1);
+                }
+                img.flipped{
+                    transform: scaleY(1);
+                }
+            }
+            h4.opened{
+                opacity: 0.65;
+            }
+        }
+
+        #div-user-buttons{
+            button{
+                width:33%;
+            }
+        }
+    }
+
+    #hamburger-menu.hidden {
+        display:none;
     }
 
     #main-text {
