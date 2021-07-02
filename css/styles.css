@@ -362,57 +362,90 @@ img {
 
 /*Header styles*/
 header {
+  position: relative;
   padding: 40px 25px 80px 25px;
   background-image: linear-gradient(to right, #ff8f70, #ff3d54);
   color: white;
-  border-bottom-left-radius: 100px; }
+  border-bottom-left-radius: 100px;
+  /*Estilos para el logo*/
+  /*Estilos para el boton hamburger*/
+  /*Estilos para el menu hamburger*/
+  /*Estilos para el texto principal*/
+  /*Estilos para los botones principales*/ }
   header #header-logo {
-    width: 60px; }
-  header nav > ul {
-    display: flex;
-    padding: 0; }
-    header nav > ul > li {
-      list-style: none; }
-      header nav > ul > li ul {
-        list-style: none;
-        padding: 15px 0;
-        background-color: #f0f0f0;
-        opacity: 0.8;
-        border-radius: 10px; }
-        header nav > ul > li ul li {
-          padding: 10px 0; }
-    header nav > ul > li.hidden ul {
-      display: none; }
+    width: clamp(75px, 45%, 100px);
+    height: clamp(auto, auto, 100%);
+    padding-top: 2%; }
   header #hamburger-button-div {
     display: flex;
     justify-content: flex-end; }
     header #hamburger-button-div #hamburger-button {
       background-color: transparent;
-      border: none; }
+      border: none;
+      width: clamp(32px, 25%, 60px); }
+      header #hamburger-button-div #hamburger-button img {
+        width: clamp(32px, 100%, 60px); }
   header #hamburger-menu {
-    width: 100%;
+    position: absolute;
+    top: 100px;
+    left: 5%;
+    width: 90%;
     padding: 0 10%;
     background-color: white;
     border-radius: 10px;
     text-align: center;
-    color: #1f3f5b; }
-    header #hamburger-menu .hamburger-submenu h4 {
-      padding-left: 3%; }
-      header #hamburger-menu .hamburger-submenu h4 img {
-        margin: 0 0 0.3% 1%;
-        width: 2.5%;
-        transform: scaleY(-1); }
-      header #hamburger-menu .hamburger-submenu h4 img.flipped {
-        transform: scaleY(1); }
-    header #hamburger-menu .hamburger-submenu h4.opened {
-      opacity: 0.65; }
-    header #hamburger-menu #div-user-buttons button {
-      width: 33%; }
+    color: #1f3f5b;
+    /*Estilos para los botones del menu hamburger*/ }
+    header #hamburger-menu > nav > ul {
+      padding: 0;
+      /*Estilos para los submenus dentro del menu hamburger*/ }
+      header #hamburger-menu > nav > ul .hamburger-submenu {
+        list-style: none; }
+        header #hamburger-menu > nav > ul .hamburger-submenu h4 {
+          padding-left: 3%;
+          font-size: 1.2rem;
+          font-weight: 500; }
+          header #hamburger-menu > nav > ul .hamburger-submenu h4 img {
+            margin: 0 0 0.3% 1%;
+            width: 2.5%;
+            transform: scaleY(-1); }
+          header #hamburger-menu > nav > ul .hamburger-submenu h4 img.flipped {
+            transform: scaleY(1); }
+          header #hamburger-menu > nav > ul .hamburger-submenu h4 span.opened {
+            opacity: 0.65; }
+        header #hamburger-menu > nav > ul .hamburger-submenu .hamburger-sublist {
+          list-style: none;
+          padding: 15px 0;
+          background-color: #f0f0f0;
+          opacity: 0.8;
+          border-radius: 10px; }
+          header #hamburger-menu > nav > ul .hamburger-submenu .hamburger-sublist li {
+            padding: 10px 0;
+            font-size: 1.1rem; }
+      header #hamburger-menu > nav > ul .hamburger-submenu.hidden ul {
+        display: none; }
+    header #hamburger-menu #div-user-buttons {
+      padding: 7% 0 10% 0; }
+      header #hamburger-menu #div-user-buttons button {
+        width: 45%;
+        font-size: 1.2rem;
+        font-weight: 500; }
+      header #hamburger-menu #div-user-buttons #div-login-button button {
+        margin-bottom: 8%;
+        border: none;
+        background-color: white;
+        color: #1f3f5b; }
+      header #hamburger-menu #div-user-buttons #div-signup-button button {
+        padding: 5% 0;
+        border: none;
+        border-radius: 30px;
+        background-image: linear-gradient(to right, #ff8f70, #ff3d54);
+        color: white; }
   header #hamburger-menu.hidden {
     display: none; }
   header #main-text {
-    font-family: "Overpass", sans-serif;
-    padding-top: 60px; }
+    padding-top: 60px;
+    font-family: "Overpass", sans-serif; }
     header #main-text * {
       text-align: center; }
     header #main-text h1 {
@@ -440,7 +473,7 @@ footer {
   background-color: #25252d;
   color: white; }
 
-@media only screen and (min-width: 671px) {
+@media only screen and (min-width: 761px) {
   /*General styles*/
   .desktop-only-image {
     display: inline-block; }

@@ -25,6 +25,6 @@ for (let submenu of hamburgerSubMenus) {
     img.addEventListener('click', (e) => {
         submenu.classList.toggle('hidden');
         img.classList.toggle('flipped');
-        submenu.querySelector('h4').classList.toggle('opened');
+        submenu.querySelector('h4 span').classList.toggle('opened');
     });
 }
