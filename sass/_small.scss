@@ -57,6 +57,7 @@ header {
     border-bottom-left-radius: 100px;
 
     /*Estilos para el logo*/
+
     #header-logo {
         width: clamp(75px, 45%, 100px);
         height: clamp(auto, auto, 100%);
@@ -64,6 +65,7 @@ header {
     }
 
     /*Estilos para el boton hamburger*/
+
     #hamburger-button-div {
         display: flex;
         justify-content: flex-end;
@@ -78,113 +80,116 @@ header {
         }
     }
 
-    /*Estilos para el menu hamburger*/
-    #hamburger-menu {
-        position: absolute;
-        top: 100px;
-        left:5%;
+    @media only screen and (max-width: 769px) {
+        /*Estilos para el menu hamburger*/
 
-        width: 90%;
-        padding: 0 10%;
+        #hamburger-menu {
+            position: absolute;
+            top: 100px;
+            left: 5%;
 
-        background-color: white;
+            width: 90%;
+            padding: 0 10%;
 
-        border-radius: 10px;
+            background-color: white;
 
-        text-align: center;
-        color: $primary-very-dark-blue;
+            border-radius: 10px;
 
-        > nav > ul {
-            padding: 0;
+            text-align: center;
+            color: $primary-very-dark-blue;
 
-            /*Estilos para los submenus dentro del menu hamburger*/
-            .hamburger-submenu {
-                list-style: none;
+            > nav > ul {
+                padding: 0;
 
-                h4 {
-                    padding-left: 3%;
+                /*Estilos para los submenus dentro del menu hamburger*/
+                .hamburger-submenu {
+                    list-style: none;
+
+                    h4 {
+                        padding-left: 3%;
+
+                        font-size: 1.2rem;
+                        font-weight: 500;
+
+                        img {
+                            margin: 0 0 0.3% 1%;
+                            width: 2.5%;
+
+                            transform: scaleY(-1);
+                        }
+                        img.flipped {
+                            transform: scaleY(1);
+                        }
+                        span.opened {
+                            opacity: 0.65;
+                        }
+                    }
+
+                    .hamburger-sublist {
+                        list-style: none;
+
+                        padding: 15px 0;
+
+                        background-color: rgb(240, 240, 240);
+                        opacity: 0.8;
+
+                        border-radius: 10px;
+
+                        li {
+                            padding: 10px 0;
+
+                            font-size: 1.1rem;
+                        }
+                    }
+                }
+                .hamburger-submenu.hidden {
+                    ul {
+                        display: none;
+                    }
+                }
+            }
+
+            /*Estilos para los botones del menu hamburger*/
+            #div-user-buttons {
+                padding: 7% 0 10% 0;
+
+                button {
+                    width: 45%;
 
                     font-size: 1.2rem;
                     font-weight: 500;
+                }
 
-                    img {
-                        margin: 0 0 0.3% 1%;
-                        width: 2.5%;
+                #div-login-button {
+                    button {
+                        margin-bottom: 8%;
 
-                        transform: scaleY(-1);
-                    }
-                    img.flipped {
-                        transform: scaleY(1);
-                    }
-                    span.opened {
-                        opacity: 0.65;
+                        border: none;
+
+                        background-color: white;
+
+                        color: $primary-very-dark-blue;
                     }
                 }
 
-                .hamburger-sublist {
-                    list-style: none;
+                #div-signup-button {
+                    button {
+                        padding: 5% 0;
 
-                    padding: 15px 0;
+                        border: none;
+                        border-radius: 30px;
 
-                    background-color: rgb(240, 240, 240);
-                    opacity: 0.8;
+                        background-image: linear-gradient(to right, $gradient-very-light-red, $gradient-light-red);
 
-                    border-radius: 10px;
-
-                    li {
-                        padding: 10px 0;
-                        
-                        font-size: 1.1rem;
+                        color: white;
                     }
-                }
-            }
-            .hamburger-submenu.hidden {
-                ul {
-                    display: none;
                 }
             }
         }
 
-        /*Estilos para los botones del menu hamburger*/
-        #div-user-buttons {
-            padding: 7% 0 10% 0;
-
-            button {
-                width: 45%;
-
-                font-size: 1.2rem;
-                font-weight: 500;
-            }
-
-            #div-login-button {
-                button {
-                    margin-bottom: 8%;
-
-                    border: none;
-
-                    background-color: white;
-
-                    color: $primary-very-dark-blue;
-                }
-            }
-
-            #div-signup-button {
-                button {
-                    padding: 5% 0;
-
-                    border: none;
-                    border-radius: 30px;
-
-                    background-image: linear-gradient(to right, $gradient-very-light-red, $gradient-light-red);
-
-                    color: white;
-                }
-            }
+        #hamburger-menu.hidden {
+            display: none;
         }
-    }
-
-    #hamburger-menu.hidden {
-        display: none;
     }
 
     /*Estilos para el texto principal*/
@@ -206,6 +211,8 @@ header {
         }
         h4 {
             margin-top: 0px;
+
+            font-weight: 300;
         }
     }
 
@@ -213,6 +220,47 @@ header {
 
     #main-buttons {
         justify-content: center;
+        padding-top: 5%;
+
+        #main-button-start {
+            padding: clamp(15px,3%,15px) 4%;
+
+            margin-right: 6%;
+
+            background-color: white;
+
+            border: none;
+            border-radius: 25px;
+
+            color: $gradient-light-red;
+            font-weight: 700;
+        }
+
+        #main-button-start:hover {
+            cursor: pointer;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: white;
+        }
+
+        #main-button-learn {
+            padding: clamp(15px,3%,15px) 5%;
+
+            margin-left: 6%;
+
+            background-color: transparent;
+
+            border: 1px solid white;
+            border-radius: 25px;
+
+            color: white;
+            font-weight: 700;
+        }
+
+        #main-button-learn:hover {
+            cursor: pointer;
+            background-color: white;
+            color: $gradient-light-red;
+        }
     }
 }
 
@@ -220,7 +268,104 @@ header {
 
 main {
     article {
+        padding: 0 10%;
         /*Hay que recortar imagenes usando CSS Slicers*/
+
+        /*Estilos para el articulo 1*/
+
+        #main-article-1 {
+            padding: 15% 0 55% 0;
+
+            font-family: "Overpass", sans-serif;
+
+            h2 {
+                text-align: center;
+                font-size: 28px;
+                font-weight: 600;
+            }
+
+            .paragraphs {
+                padding-top: 3%;
+                h3 {
+                    text-align: center;
+                    font-size: 25px;
+                    font-weight: 600;
+                }
+
+                p {
+                    text-align: center;
+                    line-height: 150%;
+                }
+            }
+        }
+
+        /*Estilos para el articulo 2*/
+
+        #main-article-2 {
+            position: relative;
+
+            margin-left: -12%;
+            width: 125%;
+
+            font-family: "Overpass", sans-serif;
+
+            img {
+                position: absolute;
+                top: -30%;
+
+                width: 90%;
+
+                @media only screen and (max-width: 380px) {
+                    top: -20%;
+                }
+            }
+
+            .text {
+                padding: 60% 9% 16% 9%;
+
+                h2 {
+                    text-align: center;
+                    font-size: 35px;
+                    font-weight: 600;
+                }
+
+                p {
+                    text-align: center;
+                    line-height: 150%;
+                }
+            }
+        }
+
+        /*Estilos para el articulo 3*/
+
+        #main-article-3 {
+            padding: 15% 0;
+
+            font-family: "Overpass", sans-serif;
+
+            img {
+                margin-left: -20%;
+
+                width: 140%;
+            }
+
+            .paragraphs {
+                padding-top: 3%;
+                h3 {
+                    text-align: center;
+                    font-size: 30px;
+                    font-weight: 600;
+                }
+
+                p {
+                    text-align: center;
+                    line-height: 180%;
+                }
+            }
+        }
+
+        /*Estilos para los articulos segun sean oscuros o claros*/
+
         .article-light-row {
             color: $primary-very-dark-blue;
         }
@@ -242,6 +387,44 @@ main {
 /*Footer styles*/
 
 footer {
+    border-top-right-radius: 85px;
+
+    padding: 11% 30%;
+
     background-color: $very-dark-black-blue;
+
     color: white;
+
+    #logo-footer {
+        width: 90%;
+        padding-left: 25%;
+        margin-bottom: 10%;
+    }
+
+    .footer-list {
+        margin-top: 5%;
+
+        text-align: center;
+
+        h4 {
+            font-weight: 700;
+        }
+
+        ul {
+            list-style: none;
+
+            padding-right: 22%;
+
+            li {
+                margin-bottom: 10%;
+
+                font-weight: 400;
+            }
+
+            li:hover {
+                cursor: pointer;
+                text-decoration: underline white;
+            }
+        }
+    }
 }

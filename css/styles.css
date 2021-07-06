@@ -369,7 +369,6 @@ header {
   border-bottom-left-radius: 100px;
   /*Estilos para el logo*/
   /*Estilos para el boton hamburger*/
-  /*Estilos para el menu hamburger*/
   /*Estilos para el texto principal*/
   /*Estilos para los botones principales*/ }
   header #header-logo {
@@ -385,64 +384,67 @@ header {
       width: clamp(32px, 25%, 60px); }
       header #hamburger-button-div #hamburger-button img {
         width: clamp(32px, 100%, 60px); }
-  header #hamburger-menu {
-    position: absolute;
-    top: 100px;
-    left: 5%;
-    width: 90%;
-    padding: 0 10%;
-    background-color: white;
-    border-radius: 10px;
-    text-align: center;
-    color: #1f3f5b;
-    /*Estilos para los botones del menu hamburger*/ }
-    header #hamburger-menu > nav > ul {
-      padding: 0;
-      /*Estilos para los submenus dentro del menu hamburger*/ }
-      header #hamburger-menu > nav > ul .hamburger-submenu {
-        list-style: none; }
-        header #hamburger-menu > nav > ul .hamburger-submenu h4 {
-          padding-left: 3%;
-          font-size: 1.2rem;
-          font-weight: 500; }
-          header #hamburger-menu > nav > ul .hamburger-submenu h4 img {
-            margin: 0 0 0.3% 1%;
-            width: 2.5%;
-            transform: scaleY(-1); }
-          header #hamburger-menu > nav > ul .hamburger-submenu h4 img.flipped {
-            transform: scaleY(1); }
-          header #hamburger-menu > nav > ul .hamburger-submenu h4 span.opened {
-            opacity: 0.65; }
-        header #hamburger-menu > nav > ul .hamburger-submenu .hamburger-sublist {
-          list-style: none;
-          padding: 15px 0;
-          background-color: #f0f0f0;
-          opacity: 0.8;
-          border-radius: 10px; }
-          header #hamburger-menu > nav > ul .hamburger-submenu .hamburger-sublist li {
-            padding: 10px 0;
-            font-size: 1.1rem; }
-      header #hamburger-menu > nav > ul .hamburger-submenu.hidden ul {
-        display: none; }
-    header #hamburger-menu #div-user-buttons {
-      padding: 7% 0 10% 0; }
-      header #hamburger-menu #div-user-buttons button {
-        width: 45%;
-        font-size: 1.2rem;
-        font-weight: 500; }
-      header #hamburger-menu #div-user-buttons #div-login-button button {
-        margin-bottom: 8%;
-        border: none;
+  @media only screen and (max-width: 769px) {
+    header {
+      /*Estilos para el menu hamburger*/ }
+      header #hamburger-menu {
+        position: absolute;
+        top: 100px;
+        left: 5%;
+        width: 90%;
+        padding: 0 10%;
         background-color: white;
-        color: #1f3f5b; }
-      header #hamburger-menu #div-user-buttons #div-signup-button button {
-        padding: 5% 0;
-        border: none;
-        border-radius: 30px;
-        background-image: linear-gradient(to right, #ff8f70, #ff3d54);
-        color: white; }
-  header #hamburger-menu.hidden {
-    display: none; }
+        border-radius: 10px;
+        text-align: center;
+        color: #1f3f5b;
+        /*Estilos para los botones del menu hamburger*/ }
+        header #hamburger-menu > nav > ul {
+          padding: 0;
+          /*Estilos para los submenus dentro del menu hamburger*/ }
+          header #hamburger-menu > nav > ul .hamburger-submenu {
+            list-style: none; }
+            header #hamburger-menu > nav > ul .hamburger-submenu h4 {
+              padding-left: 3%;
+              font-size: 1.2rem;
+              font-weight: 500; }
+              header #hamburger-menu > nav > ul .hamburger-submenu h4 img {
+                margin: 0 0 0.3% 1%;
+                width: 2.5%;
+                transform: scaleY(-1); }
+              header #hamburger-menu > nav > ul .hamburger-submenu h4 img.flipped {
+                transform: scaleY(1); }
+              header #hamburger-menu > nav > ul .hamburger-submenu h4 span.opened {
+                opacity: 0.65; }
+            header #hamburger-menu > nav > ul .hamburger-submenu .hamburger-sublist {
+              list-style: none;
+              padding: 15px 0;
+              background-color: #f0f0f0;
+              opacity: 0.8;
+              border-radius: 10px; }
+              header #hamburger-menu > nav > ul .hamburger-submenu .hamburger-sublist li {
+                padding: 10px 0;
+                font-size: 1.1rem; }
+          header #hamburger-menu > nav > ul .hamburger-submenu.hidden ul {
+            display: none; }
+        header #hamburger-menu #div-user-buttons {
+          padding: 7% 0 10% 0; }
+          header #hamburger-menu #div-user-buttons button {
+            width: 45%;
+            font-size: 1.2rem;
+            font-weight: 500; }
+          header #hamburger-menu #div-user-buttons #div-login-button button {
+            margin-bottom: 8%;
+            border: none;
+            background-color: white;
+            color: #1f3f5b; }
+          header #hamburger-menu #div-user-buttons #div-signup-button button {
+            padding: 5% 0;
+            border: none;
+            border-radius: 30px;
+            background-image: linear-gradient(to right, #ff8f70, #ff3d54);
+            color: white; }
+      header #hamburger-menu.hidden {
+        display: none; } }
   header #main-text {
     padding-top: 60px;
     font-family: "Overpass", sans-serif; }
@@ -453,13 +455,96 @@ header {
       margin-bottom: 10px;
       font-size: 40px; }
     header #main-text h4 {
-      margin-top: 0px; }
+      margin-top: 0px;
+      font-weight: 300; }
   header #main-buttons {
-    justify-content: center; }
+    justify-content: center;
+    padding-top: 5%; }
+    header #main-buttons #main-button-start {
+      padding: clamp(15px, 3%, 15px) 4%;
+      margin-right: 6%;
+      background-color: white;
+      border: none;
+      border-radius: 25px;
+      color: #ff3d54;
+      font-weight: 700; }
+    header #main-buttons #main-button-start:hover {
+      cursor: pointer;
+      background-color: rgba(255, 255, 255, 0.1);
+      color: white; }
+    header #main-buttons #main-button-learn {
+      padding: clamp(15px, 3%, 15px) 5%;
+      margin-left: 6%;
+      background-color: transparent;
+      border: 1px solid white;
+      border-radius: 25px;
+      color: white;
+      font-weight: 700; }
+    header #main-buttons #main-button-learn:hover {
+      cursor: pointer;
+      background-color: white;
+      color: #ff3d54; }
 
 /*Main styles*/
 main article {
-  /*Hay que recortar imagenes usando CSS Slicers*/ }
+  padding: 0 10%;
+  /*Hay que recortar imagenes usando CSS Slicers*/
+  /*Estilos para el articulo 1*/
+  /*Estilos para el articulo 2*/
+  /*Estilos para el articulo 3*/
+  /*Estilos para los articulos segun sean oscuros o claros*/ }
+  main article #main-article-1 {
+    padding: 15% 0 55% 0;
+    font-family: "Overpass", sans-serif; }
+    main article #main-article-1 h2 {
+      text-align: center;
+      font-size: 28px;
+      font-weight: 600; }
+    main article #main-article-1 .paragraphs {
+      padding-top: 3%; }
+      main article #main-article-1 .paragraphs h3 {
+        text-align: center;
+        font-size: 25px;
+        font-weight: 600; }
+      main article #main-article-1 .paragraphs p {
+        text-align: center;
+        line-height: 150%; }
+  main article #main-article-2 {
+    position: relative;
+    margin-left: -12%;
+    width: 125%;
+    font-family: "Overpass", sans-serif; }
+    main article #main-article-2 img {
+      position: absolute;
+      top: -30%;
+      width: 90%; }
+      @media only screen and (max-width: 380px) {
+        main article #main-article-2 img {
+          top: -20%; } }
+    main article #main-article-2 .text {
+      padding: 60% 9% 16% 9%; }
+      main article #main-article-2 .text h2 {
+        text-align: center;
+        font-size: 35px;
+        font-weight: 600; }
+      main article #main-article-2 .text p {
+        text-align: center;
+        line-height: 150%; }
+  main article #main-article-3 {
+    padding: 15% 0;
+    font-family: "Overpass", sans-serif; }
+    main article #main-article-3 img {
+      margin-left: -20%;
+      width: 140%; }
+    main article #main-article-3 .paragraphs {
+      padding-top: 3%; }
+      main article #main-article-3 .paragraphs h3 {
+        text-align: center;
+        font-size: 30px;
+        font-weight: 600; }
+      main article #main-article-3 .paragraphs p {
+        text-align: center;
+        line-height: 180%; }
   main article .article-light-row {
     color: #1f3f5b; }
   main article .article-dark-row {
@@ -470,10 +555,30 @@ main article {
 
 /*Footer styles*/
 footer {
+  border-top-right-radius: 85px;
+  padding: 11% 30%;
   background-color: #25252d;
   color: white; }
+  footer #logo-footer {
+    width: 90%;
+    padding-left: 25%;
+    margin-bottom: 10%; }
+  footer .footer-list {
+    margin-top: 5%;
+    text-align: center; }
+    footer .footer-list h4 {
+      font-weight: 700; }
+    footer .footer-list ul {
+      list-style: none;
+      padding-right: 22%; }
+      footer .footer-list ul li {
+        margin-bottom: 10%;
+        font-weight: 400; }
+      footer .footer-list ul li:hover {
+        cursor: pointer;
+        text-decoration: underline white; }
 
-@media only screen and (min-width: 761px) {
+@media only screen and (min-width: 768px) {
   /*General styles*/
   .desktop-only-image {
     display: inline-block; }
@@ -519,7 +624,119 @@ footer {
     flex-basis: 100%; }
 
   /*Header styles*/
-  /*Main styles*/ }
+  header {
+    /*Estilos para la parte superior */
+    /*Estilos para el texto principal*/
+    /*Estilos para los botones principales*/ }
+    header #top-div-desktop {
+      display: flex;
+      flex-wrap: nowrap;
+      /*Estilos para el logo*/
+      /*Quitamos el hamburger div*/
+      /*Estilos para el menu hamburger*/ }
+      header #top-div-desktop #header-logo-div {
+        flex-basis: 12%; }
+      header #top-div-desktop #hamburger-button-div {
+        flex-basis: 0%; }
+      header #top-div-desktop #hamburger-menu {
+        flex-basis: 88%;
+        display: flex;
+        width: 100%;
+        /*Estilos para los botones del menu hamburger*/ }
+        header #top-div-desktop #hamburger-menu > nav {
+          flex-basis: 65%; }
+          header #top-div-desktop #hamburger-menu > nav > ul {
+            padding: 1%;
+            display: flex;
+            justify-content: flex-start;
+            margin: 0;
+            /*Estilos para los submenus dentro del menu hamburger*/ }
+            header #top-div-desktop #hamburger-menu > nav > ul .hamburger-submenu {
+              position: relative;
+              flex-basis: clamp(55px, 20%, 110px);
+              list-style: none; }
+              header #top-div-desktop #hamburger-menu > nav > ul .hamburger-submenu h4 {
+                margin: 0;
+                padding-top: 3%;
+                font-size: 15px;
+                font-weight: 300; }
+                header #top-div-desktop #hamburger-menu > nav > ul .hamburger-submenu h4 img {
+                  width: clamp(5px, 10%, 8px); }
+                header #top-div-desktop #hamburger-menu > nav > ul .hamburger-submenu h4 img.flipped {
+                  transform: scaleY(-1); }
+              header #top-div-desktop #hamburger-menu > nav > ul .hamburger-submenu .hamburger-sublist {
+                position: absolute;
+                padding: 20px 40px 20px 13px;
+                background-color: white;
+                border-radius: 10px;
+                color: #1f3f5b; }
+                header #top-div-desktop #hamburger-menu > nav > ul .hamburger-submenu .hamburger-sublist li {
+                  list-style: none;
+                  padding: 5px 0; }
+                header #top-div-desktop #hamburger-menu > nav > ul .hamburger-submenu .hamburger-sublist li:hover {
+                  font-weight: 700;
+                  cursor: pointer; }
+            header #top-div-desktop #hamburger-menu > nav > ul .hamburger-submenu.hidden-large ul {
+              display: none; }
+        header #top-div-desktop #hamburger-menu #div-user-buttons {
+          flex-basis: 35%;
+          display: flex;
+          justify-content: flex-end; }
+          header #top-div-desktop #hamburger-menu #div-user-buttons #div-login-button {
+            flex-basis: 25%; }
+            header #top-div-desktop #hamburger-menu #div-user-buttons #div-login-button button {
+              padding: clamp(2px, 15%, 12px);
+              background-color: transparent;
+              border: none;
+              border-radius: 25px;
+              color: white;
+              font-size: 16px;
+              font-weight: 700; }
+          header #top-div-desktop #hamburger-menu #div-user-buttons #div-signup-button {
+            flex-basis: 40%; }
+            header #top-div-desktop #hamburger-menu #div-user-buttons #div-signup-button button {
+              padding: clamp(2px, 15%, 12px);
+              background-color: white;
+              border: none;
+              border-radius: 25px;
+              color: #ff3d54;
+              font-size: 16px;
+              font-weight: 700; }
+    header #main-text h1 {
+      font-size: 55px; }
+    header #main-text h4 {
+      font-size: 20px; }
+
+  /*Main styles*/
+  /*Footer styles*/
+  footer {
+    padding: 5%;
+    background-color: #25252d;
+    color: white; }
+    footer #logo-footer {
+      width: 80px;
+      padding-left: 0%;
+      margin-top: clamp(3px, 5%, 10px);
+      margin-bottom: 0%; }
+    footer .footer-list {
+      margin-top: 0;
+      font-family: "Overpass", sans-serif;
+      text-align: left; }
+      footer .footer-list h4 {
+        margin-bottom: 15%;
+        font-size: 100%;
+        font-weight: 600; }
+      footer .footer-list ul {
+        padding-left: 0%;
+        padding-right: 0%; }
+        footer .footer-list ul li {
+          width: 30%;
+          font-size: 80%;
+          font-weight: 300;
+          letter-spacing: 0.5px; }
+        footer .footer-list ul li:hover {
+          cursor: pointer;
+          text-decoration: underline white; } }
 @media only screen and (min-width: 960px) {
   .large-1 {
     flex-basis: 8.3333333333%; }

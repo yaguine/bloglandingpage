@@ -33,19 +33,24 @@
 
 <body>
   <header>
-    <div class="row limited">
-      <div class="small-6">
+    <div class="row limited" id="top-div-desktop">
+      <div class="small-6" id="header-logo-div">
         <img id="header-logo" src="assets/images/logo.svg">
       </div>
-      <div class="small-6" id="hamburger-button-div">
-        <button id="hamburger-button"><img src="assets/images/icon-hamburger.svg"></button>
+      <div class="small-6 mobile-only-image" id="hamburger-button-div">
+        <button class="mobile-only-image" id="hamburger-button"><img class="mobile-only-image"
+            src="assets/images/icon-hamburger.svg"></button>
       </div>
 
       <div id="hamburger-menu" class="hidden">
         <nav>
           <ul class="row">
-            <li class="small-12 hamburger-submenu hidden">
-              <h4><span>Product</span> <img class="arrow-img flipped" src="assets/images/icon-arrow-dark.svg"></h4>
+            <li class="small-12 hamburger-submenu hidden hidden-large">
+              <h4>
+                <span>Product</span>
+                <img class="arrow-img flipped mobile-only-image" src="assets/images/icon-arrow-dark.svg">
+                <img class="arrow-img desktop-only-image" src="assets/images/icon-arrow-light.svg">
+              </h4>
 
               <ul class="hamburger-sublist">
                 <li>Overview</li>
@@ -56,8 +61,12 @@
               </ul>
             </li>
 
-            <li class="small-12 hamburger-submenu hidden">
-              <h4><span>Company</span> <img class="arrow-img flipped" src="assets/images/icon-arrow-dark.svg"></h4>
+            <li class="small-12 hamburger-submenu hidden hidden-large">
+              <h4>
+                <span>Company</span>
+                <img class="arrow-img flipped mobile-only-image" src="assets/images/icon-arrow-dark.svg">
+                <img class="arrow-img desktop-only-image" src="assets/images/icon-arrow-light.svg">
+              </h4>
 
               <ul class="hamburger-sublist">
                 <li>About</li>
@@ -67,8 +76,12 @@
               </ul>
             </li>
 
-            <li class="small-12 hamburger-submenu hidden">
-              <h4><span>Connect</span> <img class="arrow-img flipped" src="assets/images/icon-arrow-dark.svg"></h4>
+            <li class="small-12 hamburger-submenu hidden hidden-large">
+              <h4>
+                <span>Connect</span>
+                <img class="arrow-img flipped mobile-only-image" src="assets/images/icon-arrow-dark.svg">
+                <img class="arrow-img desktop-only-image" src="assets/images/icon-arrow-light.svg">
+              </h4>
               <ul class="hamburger-sublist">
                 <li>Contact</li>
                 <li>Newsletter</li>
@@ -78,7 +91,7 @@
           </ul>
         </nav>
 
-        <hr>
+        <hr class="mobile-only-image">
 
         <div id="div-user-buttons">
           <div id="div-login-button">
@@ -96,8 +109,8 @@
         <h4>Grow your audience and build your online brand</h4>
       </div>
       <div class="row small-12" id="main-buttons">
-        <button>Start for Free</button>
-        <button>Learn More</button>
+        <button id="main-button-start">Start for Free</button>
+        <button id="main-button-learn">Learn More</button>
       </div>
     </div>
   </header>
@@ -106,7 +119,7 @@
     <article>
       <div class="superrow">
         <img class="desktop-only-image" src="assets/images/illustration-editor-desktop.svg">
-        <div class="row limited article-light-row">
+        <div class="row limited article-light-row" id="main-article-1">
           <div class="small-12">
             <h2>Designed for the future</h2>
           </div>
@@ -114,7 +127,7 @@
             <img class="mobile-only-image" src="assets/images/illustration-editor-mobile.svg">
           </div>
           <div class="row small-12">
-            <div class="row small-12 medium-6">
+            <div class="row small-12 medium-6 paragraphs">
               <div class="small-12">
                 <h3>Introducing an extensible editor</h3>
                 <p>
@@ -139,11 +152,11 @@
         </div>
       </div>
       <div>
-        <div class="row limited article-dark-row">
+        <div class="row limited article-dark-row" id="main-article-2">
           <div class="small-12 medium-6">
             <img src="assets/images/illustration-phones.svg">
           </div>
-          <div class="small-12 medium-6">
+          <div class="small-12 medium-6 text">
             <h2>State of the Art Infrastructure</h2>
 
 
@@ -159,11 +172,11 @@
       <div class="superrow">
         <img class="desktop-only-image" id="laptop-desktop-only-image"
           src="assets/images/illustration-laptop-desktop.svg">
-        <div class="row limited article-light-row">
+        <div class="row limited article-light-row" id="main-article-3">
           <div class="small-12">
             <img class="mobile-only-image" src="assets/images/illustration-laptop-mobile.svg">
           </div>
-          <div class="row small-12 medium-6">
+          <div class="row small-12 medium-6 paragraphs">
             <div class="small-12">
               <h3>Free, open, simple</h3>
               <p>
@@ -194,7 +207,7 @@
       <div class="small-12 medium-3">
         <img src="assets/images/logo.svg" id="logo-footer">
       </div>
-      <div class="small-12 medium-3">
+      <div class="small-12 medium-3 footer-list">
         <h4>Product</h4>
 
         <ul>
@@ -205,7 +218,7 @@
           <li>Integrations</li>
         </ul>
       </div>
-      <div class="small-12 medium-3">
+      <div class="small-12 medium-3 footer-list">
         <h4>Company</h4>
 
         <ul>
@@ -215,7 +228,7 @@
           <li>Careers</li>
         </ul>
       </div>
-      <div class="small-12 medium-3">
+      <div class="small-12 medium-3 footer-list">
 
         <h4>Connect</h4>
 

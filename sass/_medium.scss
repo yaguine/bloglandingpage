@@ -1,22 +1,224 @@
 /*General styles*/
 
-.desktop-only-image{
+.desktop-only-image {
     display: inline-block;
 }
 
-.mobile-only-image{
+.mobile-only-image {
     display: none;
 }
 
+
 /*Grid styles*/
 
-@for $i from 1 to 13{
-    $w:($i/12) * 100%;
-    .medium-#{$i} {flex-basis: $w;}
+@for $i from 1 to 13 {
+    $w: ($i/12) * 100%;
+    .medium-#{$i} {
+        flex-basis: $w;
+    }
 }
 
+
 /*Header styles*/
+
+header {
+    /*Estilos para la parte superior */
+
+    #top-div-desktop {
+        display: flex;
+        flex-wrap: nowrap;
+
+        /*Estilos para el logo*/
+        #header-logo-div {
+            flex-basis: 12%;
+        }
+
+        /*Quitamos el hamburger div*/
+        #hamburger-button-div {
+            flex-basis: 0%;
+        }
+
+        /*Estilos para el menu hamburger*/
+        #hamburger-menu {
+            flex-basis: 88%;
+            display: flex;
+
+            width: 100%;
+
+            > nav {
+                flex-basis: 65%;
+                > ul {
+                    padding: 1%;
+
+                    display: flex;
+                    justify-content: flex-start;
+
+                    margin: 0;
+
+                    /*Estilos para los submenus dentro del menu hamburger*/
+                    .hamburger-submenu {
+                        position: relative;
+
+                        flex-basis: clamp(55px,20%,110px);
+                        list-style: none;
+
+                        h4 {
+                            margin: 0;
+                            padding-top: 3%;
+
+                            font-size: 15px;
+                            font-weight: 300;
+
+                            img {
+                                width: clamp(5px,10%,8px);
+                            }
+
+                            img.flipped {
+                                transform: scaleY(-1);
+                            }
+                        }
+
+                        .hamburger-sublist {
+                            position: absolute;
+
+                            padding: 20px 40px 20px 13px;
+
+                            background-color: white;
+
+                            border-radius: 10px;
+
+                            color:$primary-very-dark-blue;
+                            li {
+                                list-style: none;
+
+                                padding: 5px 0;
+                            }
+
+                            li:hover {
+                                font-weight: 700;
+                                cursor: pointer;
+                            }
+                        }
+                    }
+                    .hamburger-submenu.hidden-large {
+                        ul {
+                            display: none;
+                        }
+                    }
+                }
+            }
+
+            /*Estilos para los botones del menu hamburger*/
+            #div-user-buttons {
+                flex-basis: 35%;
+
+                display: flex;
+                justify-content: flex-end;
+
+                #div-login-button {
+                    flex-basis: 25%;
+                    button {
+                        padding:clamp(2px,15%,12px);
+
+                        background-color: transparent;
+
+                        border: none;
+                        border-radius: 25px;
+
+                        color: white;
+                        font-size: 16px;
+                        font-weight: 700;
+                    }
+                }
+
+                #div-signup-button {
+                    flex-basis: 40%;
+                    button {
+                        padding: clamp(2px,15%,12px);
+
+                        background-color: white;
+
+                        border: none;
+                        border-radius: 25px;
+
+                        color: $gradient-light-red;
+                        font-size: 16px;
+                        font-weight: 700;
+                    }
+                }
+            }
+        }
+    }
+
+    /*Estilos para el texto principal*/
+
+    #main-text {
+        h1 {
+            font-size: 55px;
+        }
+        h4 {
+            font-size: 20px;
+        }
+    }
+
+    /*Estilos para los botones principales*/
+
+    #main-buttons {
+    }
+}
+
 
 /*Main styles*/
 
 
+/*Footer styles*/
+
+footer {
+    padding: 5%;
+
+    background-color: $very-dark-black-blue;
+
+    color: white;
+
+    #logo-footer {
+        width: 80px;
+        padding-left: 0%;
+        margin-top: clamp(3px,5%,10px);
+        margin-bottom: 0%;
+    }
+
+    .footer-list {
+        margin-top: 0;
+
+        font-family: "Overpass", sans-serif; // 300 - 600
+
+        text-align: left;
+
+        h4 {
+            margin-bottom: 15%;
+
+            font-size:100%;
+            font-weight:600;
+        }
+
+        ul {
+
+            padding-left: 0%;
+            padding-right: 0%;
+
+            li {
+                width:30%;
+
+                font-size:80%;
+                font-weight:300;
+
+                letter-spacing: 0.5px;
+            }
+
+            li:hover {
+                cursor: pointer;
+                text-decoration: underline white;
+            }
+        }
+    }
+}
