@@ -21,13 +21,20 @@ hamburgerButton.addEventListener('click', (e) => {
 const hamburgerSubMenus = document.querySelectorAll('.hamburger-submenu');
 
 for (let submenu of hamburgerSubMenus) {
-    let imgList = submenu.querySelectorAll('h4 img');
+    //eventos para las imagenes de mobil
+    let imgList = submenu.querySelectorAll('h4 img.mobile-only-image');
     for (let img of imgList) {
         img.addEventListener('click', (e) => {
             submenu.classList.toggle('hidden');
             img.classList.toggle('flipped');
             submenu.querySelector('h4 span').classList.toggle('opened');
-
+        });
+    }
+    //eventos para las imagenes de desktop
+    imgList = submenu.querySelectorAll('h4 img.desktop-only-image');
+    for (let img of imgList) {
+        img.addEventListener('click', (e) => {
+            img.classList.toggle('flipped');
             checkHiddenLarge(submenu)
         });
     }

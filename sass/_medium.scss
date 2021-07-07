@@ -8,7 +8,6 @@
     display: none;
 }
 
-
 /*Grid styles*/
 
 @for $i from 1 to 13 {
@@ -17,7 +16,6 @@
         flex-basis: $w;
     }
 }
-
 
 /*Header styles*/
 
@@ -59,7 +57,7 @@ header {
                     .hamburger-submenu {
                         position: relative;
 
-                        flex-basis: clamp(55px,20%,110px);
+                        flex-basis: clamp(55px, 20%, 110px);
                         list-style: none;
 
                         h4 {
@@ -70,7 +68,7 @@ header {
                             font-weight: 300;
 
                             img {
-                                width: clamp(5px,10%,8px);
+                                width: clamp(5px, 10%, 8px);
                             }
 
                             img.flipped {
@@ -81,13 +79,14 @@ header {
                         .hamburger-sublist {
                             position: absolute;
 
+                            margin-top:15px;
                             padding: 20px 40px 20px 13px;
 
                             background-color: white;
 
                             border-radius: 10px;
 
-                            color:$primary-very-dark-blue;
+                            color: $primary-very-dark-blue;
                             li {
                                 list-style: none;
 
@@ -118,7 +117,7 @@ header {
                 #div-login-button {
                     flex-basis: 25%;
                     button {
-                        padding:clamp(2px,15%,12px);
+                        padding: clamp(2px, 15%, 12px);
 
                         background-color: transparent;
 
@@ -134,7 +133,7 @@ header {
                 #div-signup-button {
                     flex-basis: 40%;
                     button {
-                        padding: clamp(2px,15%,12px);
+                        padding: clamp(2px, 15%, 12px);
 
                         background-color: white;
 
@@ -144,6 +143,11 @@ header {
                         color: $gradient-light-red;
                         font-size: 16px;
                         font-weight: 700;
+                    }
+                    button:hover {
+                        cursor: pointer;
+                        background-color: rgba(255, 255, 255, 0.1);
+                        color: white;
                     }
                 }
             }
@@ -162,14 +166,125 @@ header {
     }
 
     /*Estilos para los botones principales*/
-
-    #main-buttons {
-    }
 }
-
 
 /*Main styles*/
 
+main {
+    position: relative; // para colocar ciertas imagenes en position:absolute
+    article {
+        padding: 0;
+
+        .superrow{
+        }
+
+        /*La imagen del articulo 1, la recortamos con un slicer*/
+        #article-img-1{
+            position: absolute;
+            width: 39%;
+            height:35%;
+            top:70px;
+            right:0;
+
+            background-image: url('../assets/images/illustration-editor-desktop.svg');
+            background-position-x:-33px;
+            background-size: cover;
+        }
+
+        /*Estilos para el articulo 1*/
+
+        #main-article-1 {
+            padding-bottom: 70%;
+
+            h2{
+                font-size:35px;
+            }
+            .paragraphs {
+                h3 {
+                    text-align:left;
+                }
+
+                p {
+                    text-align:left;
+                }
+            }
+        }
+
+        /*Estilos para el articulo 2*/
+
+        #main-article-2 {
+            position: absolute;
+            top:43%;
+            left:0;
+
+            margin: 0;
+            max-width:1500px;
+            width: 100%;
+
+
+            font-family: "Overpass", sans-serif;
+
+            img {
+                position: absolute;
+                width: 35%;
+
+                top:-15%;
+
+                left : 10%;
+            }
+
+            .text {
+                padding: 5%;
+
+                h2 {
+                    text-align: left;
+                    font-size: 28px;
+                    font-weight: 600;
+                }
+
+                p {
+                    text-align: left;
+                    font-size:14px;
+                    line-height: 200%;
+                }
+            }
+        }
+
+        /*La imagen del articulo 3, la recortamos con un slicer*/
+        #laptop-desktop-only-image{
+            position: absolute;
+            width: 35%;
+            height:23%;
+            bottom:80px;
+            left:0;
+
+            background-size: 750px;
+            background-image: url('../assets/images/illustration-laptop-desktop.svg');
+            background-position-y:-78px;
+            background-position-x:-200px;
+        }
+
+        /*Estilos para el articulo 3*/
+
+        #main-article-3 {
+            padding: 5% 0 15% 0;
+            justify-content:flex-end;
+
+            .paragraphs {
+                flex-basis:50%;
+
+                h3 {
+                    text-align: left;
+                    font-size: 25px;
+                }
+
+                p {
+                    text-align: left;
+                }
+            }
+        }
+    }
+}
 
 /*Footer styles*/
 
@@ -183,7 +298,7 @@ footer {
     #logo-footer {
         width: 80px;
         padding-left: 0%;
-        margin-top: clamp(3px,5%,10px);
+        margin-top: clamp(3px, 5%, 10px);
         margin-bottom: 0%;
     }
 
@@ -197,20 +312,19 @@ footer {
         h4 {
             margin-bottom: 15%;
 
-            font-size:100%;
-            font-weight:600;
+            font-size: 100%;
+            font-weight: 600;
         }
 
         ul {
-
             padding-left: 0%;
             padding-right: 0%;
 
             li {
-                width:30%;
+                width: 30%;
 
-                font-size:80%;
-                font-weight:300;
+                font-size: 80%;
+                font-weight: 300;
 
                 letter-spacing: 0.5px;
             }
