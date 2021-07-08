@@ -31,10 +31,6 @@ header {
             flex-basis: 12%;
         }
 
-        #header-logo:hover{
-            transform: scaleX(-1);
-        }
-
         /*Quitamos el hamburger div*/
         #hamburger-button-div {
             flex-basis: 0%;
@@ -147,6 +143,8 @@ header {
                         color: $gradient-light-red;
                         font-size: 16px;
                         font-weight: 700;
+
+                        transition: 0.5s;
                     }
                     button:hover {
                         cursor: pointer;
@@ -162,15 +160,15 @@ header {
 
     #main-text {
         h1 {
+            width: 70%;
+            margin-left:auto;
+            margin-right:auto;
+
             font-size: 55px;
         }
 
         h4 {
             font-size: 20px;
-        }
-
-        *:hover{
-            transform: scaleX(-1);
         }
     }
 
@@ -205,20 +203,16 @@ main {
 
             h2{
                 font-size:35px;
+                transition: 0.5s;
             }
 
             h2:hover{
-                transform: scaleX(-1);
+                letter-spacing:0.8rem;
             }
 
             .paragraphs {
                 h3 {
                     text-align:left;
-                }
-
-                h3:hover {
-                    text-align:right;
-                    transform: scaleX(-1);
                 }
 
                 p {
@@ -257,11 +251,12 @@ main {
                     text-align: left;
                     font-size: 28px;
                     font-weight: 600;
+                    transition: 0.5s;
                 }
-
+                
                 h2:hover {
-                    text-align: right;
-                    transform: scaleX(-1);
+                    letter-spacing:0.3rem;
+                    word-wrap: nowrap;
                 }
 
                 p {
@@ -300,11 +295,6 @@ main {
                     font-size: 25px;
                 }
 
-                h3:hover{
-                    text-align:right;
-                    transform: scaleX(-1);
-                }
-
                 p {
                     text-align: left;
                 }
@@ -327,6 +317,8 @@ footer {
         padding-left: 0%;
         margin-top: clamp(3px, 5%, 10px);
         margin-bottom: 0%;
+
+        transition: 0.5s;
     }
 
     #logo-footer:hover {
@@ -346,11 +338,6 @@ footer {
 
             font-size: 100%;
             font-weight: 600;
-        }
-
-        h4:hover{
-            text-align: right;
-            transform: scaleX(-1);
         }
 
         ul {
