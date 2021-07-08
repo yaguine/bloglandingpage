@@ -175,20 +175,17 @@ main {
     article {
         padding: 0;
 
-        .superrow{
-        }
-
         /*La imagen del articulo 1, la recortamos con un slicer*/
         #article-img-1{
             position: absolute;
             width: 39%;
-            height:35%;
-            top:70px;
+            height:32%;
+            top:110px;
             right:0;
 
             background-image: url('../assets/images/illustration-editor-desktop.svg');
-            background-position-x:-33px;
-            background-size: cover;
+            background-position-x:-5px;
+            background-size: 800px 100%;
         }
 
         /*Estilos para el articulo 1*/
@@ -258,10 +255,9 @@ main {
             bottom:80px;
             left:0;
 
-            background-size: 750px;
             background-image: url('../assets/images/illustration-laptop-desktop.svg');
-            background-position-y:-78px;
-            background-position-x:-200px;
+            background-size: 750px 100%;
+            background-position-x:-215px;
         }
 
         /*Estilos para el articulo 3*/
