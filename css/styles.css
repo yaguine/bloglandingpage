@@ -636,6 +636,8 @@ footer {
       /*Estilos para el menu hamburger*/ }
       header #top-div-desktop #header-logo-div {
         flex-basis: 12%; }
+      header #top-div-desktop #header-logo:hover {
+        transform: scaleX(-1); }
       header #top-div-desktop #hamburger-button-div {
         flex-basis: 0%; }
       header #top-div-desktop #hamburger-menu {
@@ -711,6 +713,8 @@ footer {
       font-size: 55px; }
     header #main-text h4 {
       font-size: 20px; }
+    header #main-text *:hover {
+      transform: scaleX(-1); }
 
   /*Main styles*/
   main {
@@ -730,13 +734,19 @@ footer {
         right: 0;
         background-image: url("../assets/images/illustration-editor-desktop.svg");
         background-position-x: -5px;
-        background-size: 800px 100%; }
+        background-size: 800px 100%;
+        background-repeat: no-repeat; }
       main article #main-article-1 {
         padding-bottom: 70%; }
         main article #main-article-1 h2 {
           font-size: 35px; }
+        main article #main-article-1 h2:hover {
+          transform: scaleX(-1); }
         main article #main-article-1 .paragraphs h3 {
           text-align: left; }
+        main article #main-article-1 .paragraphs h3:hover {
+          text-align: right;
+          transform: scaleX(-1); }
         main article #main-article-1 .paragraphs p {
           text-align: left; }
       main article #main-article-2 {
@@ -758,6 +768,9 @@ footer {
             text-align: left;
             font-size: 28px;
             font-weight: 600; }
+          main article #main-article-2 .text h2:hover {
+            text-align: right;
+            transform: scaleX(-1); }
           main article #main-article-2 .text p {
             text-align: left;
             font-size: 14px;
@@ -770,7 +783,8 @@ footer {
         left: 0;
         background-image: url("../assets/images/illustration-laptop-desktop.svg");
         background-size: 750px 100%;
-        background-position-x: -215px; }
+        background-position-x: -215px;
+        background-repeat: no-repeat; }
       main article #main-article-3 {
         padding: 5% 0 15% 0;
         justify-content: flex-end; }
@@ -779,6 +793,9 @@ footer {
           main article #main-article-3 .paragraphs h3 {
             text-align: left;
             font-size: 25px; }
+          main article #main-article-3 .paragraphs h3:hover {
+            text-align: right;
+            transform: scaleX(-1); }
           main article #main-article-3 .paragraphs p {
             text-align: left; }
 
@@ -792,14 +809,20 @@ footer {
       padding-left: 0%;
       margin-top: clamp(3px, 5%, 10px);
       margin-bottom: 0%; }
+    footer #logo-footer:hover {
+      transform: scaleX(-1); }
     footer .footer-list {
       margin-top: 0;
       font-family: "Overpass", sans-serif;
       text-align: left; }
       footer .footer-list h4 {
+        width: 30%;
         margin-bottom: 15%;
         font-size: 100%;
         font-weight: 600; }
+      footer .footer-list h4:hover {
+        text-align: right;
+        transform: scaleX(-1); }
       footer .footer-list ul {
         padding-left: 0%;
         padding-right: 0%; }
@@ -847,3 +870,5 @@ footer {
 
   .large-12 {
     flex-basis: 100%; } }
+
+/*# sourceMappingURL=styles.css.map */

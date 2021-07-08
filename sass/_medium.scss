@@ -31,6 +31,10 @@ header {
             flex-basis: 12%;
         }
 
+        #header-logo:hover{
+            transform: scaleX(-1);
+        }
+
         /*Quitamos el hamburger div*/
         #hamburger-button-div {
             flex-basis: 0%;
@@ -160,8 +164,13 @@ header {
         h1 {
             font-size: 55px;
         }
+
         h4 {
             font-size: 20px;
+        }
+
+        *:hover{
+            transform: scaleX(-1);
         }
     }
 
@@ -186,6 +195,7 @@ main {
             background-image: url('../assets/images/illustration-editor-desktop.svg');
             background-position-x:-5px;
             background-size: 800px 100%;
+            background-repeat: no-repeat;
         }
 
         /*Estilos para el articulo 1*/
@@ -196,9 +206,19 @@ main {
             h2{
                 font-size:35px;
             }
+
+            h2:hover{
+                transform: scaleX(-1);
+            }
+
             .paragraphs {
                 h3 {
                     text-align:left;
+                }
+
+                h3:hover {
+                    text-align:right;
+                    transform: scaleX(-1);
                 }
 
                 p {
@@ -239,6 +259,11 @@ main {
                     font-weight: 600;
                 }
 
+                h2:hover {
+                    text-align: right;
+                    transform: scaleX(-1);
+                }
+
                 p {
                     text-align: left;
                     font-size:14px;
@@ -258,6 +283,7 @@ main {
             background-image: url('../assets/images/illustration-laptop-desktop.svg');
             background-size: 750px 100%;
             background-position-x:-215px;
+            background-repeat: no-repeat;
         }
 
         /*Estilos para el articulo 3*/
@@ -272,6 +298,11 @@ main {
                 h3 {
                     text-align: left;
                     font-size: 25px;
+                }
+
+                h3:hover{
+                    text-align:right;
+                    transform: scaleX(-1);
                 }
 
                 p {
@@ -298,6 +329,10 @@ footer {
         margin-bottom: 0%;
     }
 
+    #logo-footer:hover {
+        transform:scaleX(-1);
+    }
+
     .footer-list {
         margin-top: 0;
 
@@ -306,10 +341,16 @@ footer {
         text-align: left;
 
         h4 {
+            width:30%;
             margin-bottom: 15%;
 
             font-size: 100%;
             font-weight: 600;
+        }
+
+        h4:hover{
+            text-align: right;
+            transform: scaleX(-1);
         }
 
         ul {
