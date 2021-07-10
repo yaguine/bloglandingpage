@@ -87,6 +87,10 @@ header {
                             border-radius: 10px;
 
                             color: $primary-very-dark-blue;
+
+                            transform: scale(1);
+                            transition: transform 350ms,
+                                        margin-top 350ms;
                             li {
                                 list-style: none;
 
@@ -101,7 +105,8 @@ header {
                     }
                     .hamburger-submenu.hidden-large {
                         ul {
-                            display: none;
+                            margin-top:-55px;
+                            transform:scale(0);
                         }
                     }
                 }

@@ -698,7 +698,9 @@ footer {
                 padding: 20px 40px 20px 13px;
                 background-color: white;
                 border-radius: 10px;
-                color: #1f3f5b; }
+                color: #1f3f5b;
+                transform: scale(1);
+                transition: transform 350ms, margin-top 350ms; }
                 header #top-div-desktop #hamburger-menu > nav > ul .hamburger-submenu .hamburger-sublist li {
                   list-style: none;
                   padding: 5px 0; }
@@ -706,7 +708,8 @@ footer {
                   font-weight: 700;
                   cursor: pointer; }
             header #top-div-desktop #hamburger-menu > nav > ul .hamburger-submenu.hidden-large ul {
-              display: none; }
+              margin-top: -55px;
+              transform: scale(0); }
         header #top-div-desktop #hamburger-menu #div-user-buttons {
           flex-basis: 35%;
           display: flex;
